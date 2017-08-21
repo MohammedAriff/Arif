@@ -1,3 +1,11 @@
 Staged - Those that are moved to staging area/ Added to index
 Tracked - modified files
 UnTracked - new files. Always unstaged. If staged, that means they are tracked.
+git revert <commit 1> <commit 2> 
+If you want to remove untracked files (e.g., new files, generated files):git clean -f
+untracked directories (e.g., new or automatically generated directories):git clean -fd
+git fetch  # will fetch the latest changes on the remote
+git reset --hard origin/master # will set your local branch to match the representation of the remote just pulled down.
+git checkout . - Removes Unstaged Tracked files ONLY [Type 2]
+git clean -f - Removes Unstaged UnTracked files ONLY [Type 3]
+git reset --hard - Removes Staged Tracked and UnStaged Tracked files ONLY[Type 1, Type 2]
